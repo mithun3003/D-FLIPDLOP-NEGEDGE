@@ -1,4 +1,4 @@
-# D-FLIPDLOP-NEGEDGE
+# EXP-08 D-FLIPDLOP-NEGEDGE
 
 **AIM:**
 
@@ -28,17 +28,49 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Draw the logic circuit diagram of a negative-edge triggered D Flip-Flop.
+
+2.Connect the circuit using logic gates or IC on a breadboard/simulator.
+
+3.Apply clock pulses and set the D input using switches or logic sources.
+
+4.Observe the Q and Q̅ outputs on a logic analyzer or oscilloscope.
+
+5.Verify output changes only at the falling edge of the clock.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
+Developed by: MITHUN S
+
+RegisterNumber: 212224240088
+*/
+```
+module exp8(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
+```
 **RTL LOGIC FOR FLIPFLOPS**
+
+![image](https://github.com/user-attachments/assets/b2e57edd-d9c0-4538-8bc0-c85093ef10a9)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![image](https://github.com/user-attachments/assets/23c6f21e-f2b0-40b9-a781-2b7b1cd32c06)
+
+
 
 **RESULTS**
+
+To implement D flipflop using verilog and validating their functionality using their functional tables is verified.
